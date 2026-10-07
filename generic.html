@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Adaptado del template "Spectral" by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Proyectos — Dídac Ucero</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Dídac Ucero</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Inicio</a></li>
+											<li><a href="generic.html">Proyectos</a></li>
+											<li><a href="../cv/">Currículum</a></li>
+											<li><a href="mailto:duceroparera@gmail.com">Contacto</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Proyectos</h2>
+							<p>Algunos de los laboratorios y prácticas que he hecho durante el ciclo de ASIR</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<h3>Laboratorio DHCP con relay (Vagrant)</h3>
+								<p>Montaje de tres máquinas virtuales con Vagrant: <strong>asoserver1</strong> como servidor DHCP, <strong>asoserver2</strong> haciendo de relay entre dos subredes distintas, y <strong>asoserver3</strong> como cliente en la segunda subred. Configuré el reenvío de peticiones a través del relay, añadí la ruta de vuelta necesaria en el servidor y dejé toda la configuración (ruta de red e <code>ip_forward</code>) persistente en netplan y sysctl, de forma que sobrevive a un reinicio completo de las máquinas.</p>
+
+								<p>Comprobé el funcionamiento con capturas del ciclo completo de negociación DHCP (Discover, Offer, Request, Ack) en los registros del servidor y del relay.</p>
+
+								<hr />
+
+								<h4>Servidor DNS autoritativo con BIND9</h4>
+								<p>Despliegue de un servidor DNS con BIND9 sobre Ubuntu Server, con una zona propia (directa e inversa) para una subred concreta. Configuré los registros A, PTR y MX, restringí las consultas a la subred indicada en el enunciado y verifiqué el comportamiento con <code>dig</code>: resolución correcta desde dentro de la subred y rechazo (<code>REFUSED</code>) desde fuera de ella, demostrando que la restricción funciona de verdad y no solo en la configuración.</p>
+
+								<hr />
+
+								<h4>Web de currículum con HTML5 UP</h4>
+								<p>Adaptación de una plantilla de <a href="https://html5up.net" target="_blank">HTML5 UP</a> para montar mi propia web de currículum, con mis datos reales de experiencia, formación e idiomas. Desplegada en un servidor Apache y, en paralelo, en GitHub Pages.</p>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="mailto:duceroparera@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Dídac Ucero</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
